@@ -19,16 +19,16 @@ _LOGGER = logging.getLogger(__name__)
 
 
 @dataclass
-class WellyouAPIData:
+class MyfitappAPIData:
     """Class to hold api data."""
 
     workload_percentage: int
 
 
-class WellyouCoordinator(DataUpdateCoordinator):
+class MyfitappCoordinator(DataUpdateCoordinator):
     """My coordinator."""
 
-    data: WellyouAPIData
+    data: MyfitappAPIData
 
     def __init__(self, hass: HomeAssistant, config_entry: ConfigEntry) -> None:
         """Initialize coordinator."""
@@ -59,7 +59,7 @@ class WellyouCoordinator(DataUpdateCoordinator):
         """
         try:
             workload_percentage = await self.api.getLiveMetrics()
-            return WellyouAPIData(workload_percentage=workload_percentage)
+            return MyfitappAPIData(workload_percentage=workload_percentage)
         except Exception as err:
             # This will show entities as unavailable by raising UpdateFailed exception
             raise UpdateFailed(f"Error communicating with API: {err}") from err
