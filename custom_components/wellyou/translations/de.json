@@ -1,0 +1,18 @@
+{
+    "title": "Wellyou Fitness",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Wellyou Fitness Setup",
+                "description": "Wähle ein Studio in deiner Nähe aus.",
+                "data": {
+                    "id": "Studio"
+                }
+            }
+        },
+        "abort": {
+            "connenction": "Fehler bei dem Verbindungsaufbau.",
+            "unknown": "Unbekannter Fehler."
+        }
+    }
+    }
