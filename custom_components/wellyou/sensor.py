@@ -14,7 +14,7 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from homeassistant.const import PERCENTAGE
 
 from .const import DOMAIN
-from .coordinator import WellyouCoordinator
+from .coordinator import MyfitappCoordinator
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -25,7 +25,7 @@ async def async_setup_entry(
 ):
     """Set up the Sensors."""
     # This gets the data update coordinator from hass.data as specified in your __init__.py
-    coordinator: WellyouCoordinator = hass.data[DOMAIN][
+    coordinator: MyfitappCoordinator = hass.data[DOMAIN][
         config_entry.entry_id
     ].coordinator
 
@@ -45,7 +45,7 @@ class WorkloadPercentageSensor(CoordinatorEntity):
     _attr_has_entity_name = True
     _attr_unit_of_measurement = PERCENTAGE
     
-    def __init__(self, coordinator: WellyouCoordinator) -> None:
+    def __init__(self, coordinator: MyfitappCoordinator) -> None:
         super().__init__(coordinator)
         self.name = f"{self.coordinator.studio_name} Auslastung"
         self.unique_id = f"{DOMAIN}-{self.coordinator.studio_id}-auslastung"
