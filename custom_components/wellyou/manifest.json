@@ -3,8 +3,8 @@
   "name": "Wellyou Fitness",
   "codeowners": ["@timniklas"],
   "config_flow": true,
-  "documentation": "https://github.com/timniklas/hacs_wellyou",
+  "documentation": "https://github.com/timniklas/hass-wellyou",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/timniklas/hacs_wellyou/issues",
+  "issue_tracker": "https://github.com/timniklas/hass-wellyou/issues",
   "version": "0.0.0"
 }
