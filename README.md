@@ -6,6 +6,8 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/timniklas/hacs_wellyou?style=for-the-badge)
 [![hacs](https://img.shields.io/badge/HACS-Integration-blue.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
+![icon](https://brands.home-assistant.io/wellyou/dark_logo.png)
+
 ## Overview
 
 The Wellyou Fitness Home Assistant Custom Integration allows you to integrate your Wellyou studio with your Home Assistant setup.
